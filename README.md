@@ -20,10 +20,7 @@ These instructions will get you a copy of the project up and running on your loc
 Then you need to import the db and create a "conf" folder with a "database.conf.php" file in it.
 The following patern is to use in "database.conf.php" :
 
-  <?php 
-  /**
-  * MySQL auth info
-  */
+ `<?php 
   $host = 'localhost';
   $base = 'Eval4';
   $user = 'root';
@@ -40,7 +37,7 @@ The following patern is to use in "database.conf.php" :
    die($e);
   }
 
-  return $database;
+  return $database;`
 
 
 ### Prerequisites
