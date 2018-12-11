@@ -20,29 +20,28 @@ These instructions will get you a copy of the project up and running on your loc
 Then you need to import the db and create a "conf" folder with a "database.conf.php" file in it.
 The following patern is to use in "database.conf.php" :
 
-"
-<?php 
-/**
- * MySQL auth info
- */
-$host = 'localhost';
-$base = 'Eval4';
-$user = 'root';
-$pass = 'Your password';
+> <?php 
+> /**
+> * MySQL auth info
+> */
+> $host = 'localhost';
+> $base = 'Eval4';
+> $user = 'root';
+> $pass = 'Your password';
 
-try
-{
-  $database = new PDO("mysql:host=$host;dbname=$base", $user, $pass);
-  $database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $database->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-}
-catch(PDOException $e)
-{
-  die($e);
-}
+> try
+> {
+>  $database = new PDO("mysql:host=$host;dbname=$base", $user, $pass);
+>  $database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+>  $database->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+> }
+> catch(PDOException $e)
+> {
+>  die($e);
+> }
 
-return $database;
-"
+> return $database;
+
 
 ### Prerequisites
 
